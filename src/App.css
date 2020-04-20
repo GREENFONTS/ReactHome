@@ -1,65 +1,63 @@
-.App {
-  text-align: center;
+#container{
+    margin: 0px ;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-.Container{
-  background-color: #61dafb;
-}
-.Container h1{
-  text-align: center;
-  font-weight: 800;
-}
-.Container p, .Container ul li{
-  font-weight: 700;
-  font-size: 20px;
-}
-footer{
-  text-align: right;
-}
-.Todo {
-  display: block; 
-  margin-left: 30px;
-  
-}
-.Todo p, .Todo input{
- font-size: 25px;
- padding-bottom: 10px;
-}
-.Todo p{
- display: inline;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#header{
+    margin: 0px auto;
 
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#header h2{
+    padding: 20px 0px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+#header p{
+     padding: 5px 0px 5px;
+    font-weight: 600;
+    font-size: 17px;
+    font-family: cursive;
+}
+#button{
+    background-color: rgb(145, 200, 245);
+    border: 2px solid black;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 10px auto 20px;
+}
+#button:hover{
+    background-color: rgb(255, 254, 251);
+}
+#quote{
+    padding: 5px 0px 5px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: cursive;
+    margin: 10px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width: 760px){
+#container{
+    width: 50%;
+    margin: 100px auto;  
+    border-radius: 20px; 
+}
+#header h2{
+    padding: 30px 0px 10px;
+    letter-spacing: 3px;
+    font-size: 50px;
+}
+#header p{  
+    font-size: 25px;  
+}
+#button{
+    font-weight: 700;
+    font-size: 25px;
+    margin: 10px auto 30px;
+}
+#quote{
+    font-size: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
-
