@@ -1,6 +1,20 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 function App() {
+  const [data, setdata] = useState(" ");
+
+async function getQuote() {
+
+    const response = await fetch("https://api.quotable.io/random")
+  const data = await response.json()
+  setdata(data)
+    
+}
+  useEffect(() => {
+    document.getElementById("quote").innerHTML = `<p>${data.content}</p>  
+                                                  <hr>
+                                                  <i>${data.author}</i>`
+  })
  
   return (
     <div className="container-fluid bg-info " id="container">
@@ -25,16 +39,16 @@ function App() {
   )
     
 }
- async function getQuote () {
+//  async function getQuote () {
 
-  const response = await fetch("https://api.quotable.io/random")
-const data = await response.json()
-console.log(`${data.content}`)
-console.log(`${data.author}`)
-document.getElementById("quote").innerHTML = `<p>${data.content}</p>  
-                                                  <hr>
-                                                  <i>${data.author}</i>`
-}
+//   const response = await fetch("https://api.quotable.io/random")
+// const data = await response.json()
+// console.log(`${data.content}`)
+// console.log(`${data.author}`)
+// document.getElementById("quote").innerHTML = `<p>${data.content}</p>  
+//                                                   <hr>
+//                                                   <i>${data.author}</i>`
+// }
 
 
     
