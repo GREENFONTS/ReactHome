@@ -1,21 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
   const [data, setdata] = useState(" ");
-
-async function getQuote() {
+  console.log(data)
+  async function getQuote() {
 
     const response = await fetch("https://api.quotable.io/random")
-  const data = await response.json()
-  setdata(data)
-    
-}
-  useEffect(() => {
-    document.getElementById("quote").innerHTML = `<p>${data.content}</p>  
-                                                  <hr>
-                                                  <i>${data.author}</i>`
-  })
- 
+    const data = await response.json()
+    setdata(data)
+
+  }
+
+
+
   return (
     <div className="container-fluid bg-info " id="container">
       <div className="container-fluid " id="header">
@@ -31,13 +28,15 @@ async function getQuote() {
             data-placement="top" title="Click the button for Your quote ">Quote</a></button></span>
       </div>
       <div className="container" id="quote">
-
+        <p>{data.content}</p>
+        <hr />
+        <i>{data.author}</i>
       </div>
     </div>
 
 
   )
-    
+
 }
 //  async function getQuote () {
 
@@ -51,12 +50,12 @@ async function getQuote() {
 // }
 
 
-    
-      
-  
 
 
- 
+
+
+
+
 
 export default App;
 
